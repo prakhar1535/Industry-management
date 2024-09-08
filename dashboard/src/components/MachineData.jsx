@@ -2,8 +2,20 @@ import React, { useState, useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import ROSLIB from "roslib";
 import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
 import beepSound from "../assets/mixkit-siren-tone-1649.mp3";
 
+// Register Chart.js components
+ChartJS.register(LineElement, PointElement, CategoryScale, LinearScale, Title, Tooltip, Legend);
 const MachineData = () => {
   const [connected, setConnected] = useState(false);
   const [backgroundDanger, setBackgroundDanger] = useState(false);
