@@ -36,7 +36,7 @@ const Workers = () => {
           } catch (error) {
             console.log("Connection problem");
           }
-        }, 3000);
+        }, 155554545);
       });
     };
 

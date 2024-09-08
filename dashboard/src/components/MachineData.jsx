@@ -63,7 +63,7 @@ const MachineData = () => {
           } catch (error) {
             console.log("Connection problem");
           }
-        }, 3000);
+        }, 1555000);
       });
     };
 
