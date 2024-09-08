@@ -72,7 +72,7 @@ const MachineData = () => {
         try {
           const gasListener = new ROSLIB.Topic({
             ros: rosInstance,
-            name: "/gas",
+            name: "/ammonia",
             messageType: "std_msgs/Float32",
           });
 
@@ -205,7 +205,7 @@ const MachineData = () => {
     scales: {
       y: {
         beginAtZero: true,
-        max: 200,
+        max: 400,
         ticks: {
           stepSize: 10,
         },
@@ -276,7 +276,7 @@ const MachineData = () => {
             }}
           >
             <Typography fontSize={"18px"} color="black" fontWeight={600}>
-              {((gasMessages + tempMessages) / 130) * 100}% - Machine Health
+            {100 - tempMessages}% avg. - Machine Health
               (curretly)
             </Typography>
           </Box>

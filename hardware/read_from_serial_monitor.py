@@ -41,7 +41,7 @@ while not rospy.is_shutdown():
 
             elif "Ammonia Level (Analog)" in packet:
                 ammonia_val = float(packet.split(": ")[1])  # Extract ammonia level
-                print(f"Publishing ammonia level: {ammonia_val}")
+                print({ammonia_val})
                 ammonia_pub.publish(ammonia_val)
 
             elif "Critical Ammonia Level" in packet:
